@@ -1,0 +1,14 @@
+<a href="{% url 'home' %}">Try again</a>
+<h1>There are {{ count }} words in here</h1>
+<h1>Your text:</h1>
+{{ fulltext }}
+<h1>Word Count</h1>
+<br>
+<br>
+
+{% for word,wordCount in wordDictionary %}
+    {{ word }}
+    -
+    {{ wordCount }}
+    <br>
+{% endfor %}
